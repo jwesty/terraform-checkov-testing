@@ -10,7 +10,7 @@ from config import RSConfig
 from finding import FindingSeverity
 from analyzers.terraform.tf_shared import LINTER_TAGS_REQUIRED, TAGGABLE_RESOURCES
 
-LINTER_TAGS_REQUIRED = [
+LINTER_TAGS_REQUIRED = [  # These are just samples, the list is much longer
     "aws_codebuild_project",
     "aws_customer_gateway",
     "aws_db_event_subscription",
@@ -19,15 +19,15 @@ LINTER_TAGS_REQUIRED = [
     "aws_db_snapshot",
 ]
 
-TAGGABLE_RESOURCES = [
-  aws_accessanalyzer_analyzer, 
-  aws_acm_certificate,
-  aws_acmpca_certificate_authority, 
-  aws_ami, 
-  aws_ami_copy, 
-  aws_ami_from_instance, 
-  aws_api_gateway_api_key, 
-  aws_api_gateway_client_certificate, 
+TAGGABLE_RESOURCES = [  # These are just samples, the list is much longer
+ "aws_accessanalyzer_analyzer", 
+  "aws_acm_certificate",
+  "aws_acmpca_certificate_authority", 
+  "aws_ami", 
+  "aws_ami_copy", 
+  "aws_ami_from_instance", 
+  "aws_api_gateway_api_key", 
+  "aws_api_gateway_client_certificate", 
 ]
 
 class AppTag(BaseResourceCheck, CustomCheckDetails):
