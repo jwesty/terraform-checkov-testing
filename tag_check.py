@@ -71,6 +71,8 @@ checks = [
 ]
 
 def check_for_variable_tags(conf: Dict) -> Optional[bool]:
+    # I end up having to skip anything that I get back from Checkov that hasn't been parsed correctly or else the checks will fail
+    # So, this is a partial list of what Checkov isn't figuring out that I have to skip instead.
     value = jmespath.search(f"tags[*]", conf)
     if value:
         if "common_data_tags" in value:
